@@ -1,0 +1,5 @@
+target/
+artifacts/
+scripts/.deploy.env
+__pycache__/
+*.pyc

@@ -1,0 +1,7 @@
+[toolchain]
+# A dated nightly: the wasm build needs build-std (see scripts/build-wasm.sh), and a different compiler
+# produces a different binary. Change it deliberately, rebuild, review and publish the new checksum.
+channel = "nightly-2026-11-21"
+components = ["rust-src"]
+targets = ["wasm32-unknown-unknown"]
+profile = "minimal"

@@ -1,0 +1,25 @@
+[package]
+name = "liatom-hub"
+description = "liATOM liquid staking contract for Cosmos Hub"
+edition.workspace = true
+version.workspace = true
+license.workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+library = []
+
+[dependencies]
+# Hub (wasmd v0.60.10) exposes capabilities up to cosmwasm_2_2.
+cosmwasm-std = { version = "~2.2", features = ["staking", "cosmwasm_2_2"] }
+cosmwasm-schema = "~2.2"
+cw-storage-plus = "2.0"
+schemars = "0.8"
+serde = { version = "1", default-features = false, features = ["derive"] }
+thiserror = "2"
+
+[dev-dependencies]
+proptest = "1"
+serde_json = "1"

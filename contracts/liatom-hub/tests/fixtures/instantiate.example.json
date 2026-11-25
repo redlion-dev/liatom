@@ -1,0 +1,16 @@
+{
+  "admin": "cosmos1exampleadminaddress",
+  "treasury": "cosmos1exampletreasuryaddress",
+  "fee_bps": 1000,
+  "epoch_secs": 345600,
+  "unbonding_secs": 1814400,
+  "min_deposit": "1000000",
+  "max_tvl": "100000000",
+  "denom_creation_fee": "10000000",
+  "validators": [
+    {
+      "validator": "cosmosvaloper1red54x4vu6ncz4hq8jw72z2u6he7fkzlyjsle0",
+      "weight_bps": 10000
+    }
+  ]
+}

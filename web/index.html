@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>liATOM</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">liATOM</div>
+    <div class="right">
+      <span id="network" class="muted"></span>
+      <button id="connect" class="primary"></button>
+    </div>
+  </header>
+
+  <main>
+    <div id="banner" class="banner" hidden></div>
+
+    <section class="stats">
+      <div><span class="label" data-i18n="rate"></span><b id="s-rate">-</b></div>
+      <div><span class="label" data-i18n="tvl"></span><b id="s-tvl">-</b></div>
+      <div><span class="label" data-i18n="supply"></span><b id="s-supply">-</b></div>
+      <div><span class="label" data-i18n="fee"></span><b id="s-fee">-</b></div>
+    </section>
+
+    <nav class="tabs">
+      <button data-tab="stake" class="tab active" data-i18n="stake"></button>
+      <button data-tab="unstake" class="tab" data-i18n="unstake"></button>
+      <button data-tab="lsm" class="tab" data-i18n="lsm"></button>
+      <button data-tab="claims" class="tab" data-i18n="claims"></button>
+    </nav>
+
+    <section id="tab-stake" class="panel">
+      <div class="field">
+        <div class="row"><label for="in-stake" data-i18n="youStake"></label>
+          <span class="muted"><span data-i18n="balance"></span>: <span id="bal-atom">-</span> ATOM
+            <a href="#" id="max-stake" data-i18n="max"></a></span></div>
+        <div class="input"><input id="in-stake" inputmode="decimal" placeholder="0.0" autocomplete="off" /><span>ATOM</span></div>
+      </div>
+      <div class="summary"><span><span data-i18n="youGet"></span></span><b><span id="out-stake">0</span> liATOM</b></div>
+      <p class="note" id="hint-stake"></p>
+      <button id="btn-stake" class="primary wide" disabled data-i18n="stake"></button>
+    </section>
+
+    <section id="tab-unstake" class="panel" hidden>
+      <div class="field">
+        <div class="row"><label for="in-unstake" data-i18n="youUnstake"></label>
+          <span class="muted"><span data-i18n="balance"></span>: <span id="bal-liatom">-</span> liATOM
+            <a href="#" id="max-unstake" data-i18n="max"></a></span></div>
+        <div class="input"><input id="in-unstake" inputmode="decimal" placeholder="0.0" autocomplete="off" /><span>liATOM</span></div>
+      </div>
+      <div class="summary"><span><span data-i18n="worthNow"></span></span><b><span id="out-unstake">0</span> ATOM</b></div>
+      <p class="note" id="unstake-note"></p>
+      <p class="note" id="hint-unstake"></p>
+      <button id="btn-unstake" class="primary wide" disabled data-i18n="unstake"></button>
+      <p class="note" data-i18n="unstakeSharesNote" style="margin-top:14px"></p>
+      <button id="btn-unstake-shares" class="primary wide" disabled data-i18n="unstakeShares"></button>
+    </section>
+
+    <section id="tab-lsm" class="panel" hidden>
+      <p class="note" data-i18n="lsmIntro"></p>
+      <h3 data-i18n="lsmStep1"></h3>
+      <p class="muted" id="lsm-deleg-empty" hidden></p>
+      <div id="lsm-deleg"></div>
+      <h3 data-i18n="lsmStep2"></h3>
+      <p class="muted" id="lsm-tokens-empty" hidden></p>
+      <div id="lsm-tokens"></div>
+      <p class="note" data-i18n="lsmNote"></p>
+    </section>
+
+    <section id="tab-claims" class="panel" hidden>
+      <p class="muted" id="claims-empty" data-i18n="noClaims" hidden></p>
+      <div id="claims-list"></div>
+    </section>
+  </main>
+
+  <footer id="contract-info" class="muted"></footer>
+
+  <div id="toast" class="toast" hidden></div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

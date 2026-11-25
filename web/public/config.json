@@ -1,0 +1,10 @@
+{
+  "chainId": "cosmoshub-4",
+  "chainName": "Cosmos Hub",
+  "rpc": "REPLACE_WITH_RPC_URL",
+  "contract": "REPLACE_WITH_CONTRACT_ADDRESS",
+  "bondDenom": "uatom",
+  "gasPrice": "REPLACE_WITH_GAS_PRICE_uatom",
+  "gasReserve": "1000000",
+  "explorerTx": "https://www.mintscan.io/cosmos/tx/{hash}"
+}
