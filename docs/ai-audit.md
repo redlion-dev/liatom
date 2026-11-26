@@ -24,7 +24,8 @@ Out of scope: `src/tests.rs`, `tests/invariants.rs`, `scripts/`, `web/`. The kee
 no power over funds: it only calls permissionless messages. The web UI is a static page that sends
 `MsgExecuteContract` to one address from `config.json`.
 
-Launch parameters: one validator, `max_tvl` of 100 ATOM, fee 10%.
+Launch parameters: one validator, `max_tvl` of 100 ATOM (raised to 300 ATOM after launch), fee 10%. The contract is live
+on Cosmos Hub, see the status in the [README](../README.md).
 
 ## Where the money is
 
